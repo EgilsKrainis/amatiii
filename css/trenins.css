@@ -16,16 +16,16 @@
     min-height: 100vh;
   }
 
-  .super-virs-headers {
+  /* .super-virs-headers {
     grid-column-start: 1;
     grid-column-end: 3;
-  }
+  } */
 
-  main,
+  /* main,
   footer {
     grid-column-start: 1;
     grid-column-end: 3;
-  }
+  } */
 
   main, footer, header, .headers, nav {
     grid-column-start: 1;
