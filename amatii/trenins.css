@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .inline {
+    display: inline;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-template-rows: 0em 6.25em auto auto 2.25em;
+    background-color: lightpink;
+    min-height: 100vh;
+  }
+
+  /* .super-virs-headers {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  } */
+
+  /* main,
+  footer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  } */
+
+  main, footer, header, .headers, nav {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .left-section,
+  .right-section {
+    width: 25%;
+    margin-left: auto;
+  }
+
+  .central-section {
+    flex-grow: 1;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+    width: 980px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+    width: 980px;
+
+    & li {
+      display: inline-block;
+      text-align: center;
+      width: 130px;
+      text-transform: uppercase;
+
+      &:hover {
+        font-weight: 700;
+        cursor: pointer;
+      }
+    }
+  }
+
+  nav li:hover {
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .nav-login-logo {
+    margin-right: 2em;
+  }
+
+  @media screen and (width > 1000px) {
+    .container {
+      width: 1000px;
+      margin: auto;
+    }
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+    width: 980px;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    width: 980px;
+  }
