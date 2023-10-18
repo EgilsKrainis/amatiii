@@ -10,7 +10,7 @@
   
   .container {
     display: grid;
-    grid-template-columns: 50% 1fr;
+    grid-template-columns: 20% 1fr 20%;
     grid-template-rows: 0em 6.25em auto auto 2.25em;
     background-color: lightpink;
     min-height: 100vh;
@@ -59,7 +59,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 100px;
+    height: 150px;
     width: 980px;
 
     & li {
@@ -95,7 +95,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 100px;
+    height: 250px;
     width: 980px;
   }
 
