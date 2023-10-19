@@ -4,62 +4,97 @@
     box-sizing: border-box;
   }
 
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Lai novērstu rullīšanos, ja kāda sadaļa ir lielāka par ekrānu */
+  }
+
   .inline {
     display: inline;
   }
   
   .container {
     display: grid;
-    grid-template-columns: 50% 1fr;
+    grid-template-columns: 20% 60% 20%;
     grid-template-rows: 0em 6.25em auto auto 2.25em;
     background-color: lightpink;
-    min-height: 100vh;
+    height: 100vh;
   }
-
-  /* .super-virs-headers {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  } */
-
-  /* main,
-  footer {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  } */
-
+  
+  @media screen and (width > 1000px) {
+    .container {
+      width: 1000px;
+      margin: auto;
+    }
+  }
+  
   main, footer, header, .headers, nav {
     grid-column-start: 1;
     grid-column-end: 3;
   }
 
-  main {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-  }
-
-  .left-section,
-  .right-section {
-    width: 25%;
-    margin-left: auto;
-  }
-
-  .central-section {
-    flex-grow: 1;
-  }
-
   header {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+    width: 980px; */
+    grid-column: 1 / -1;
+    grid-row: 1;
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 100px;
     width: 980px;
+    position: absolute;
+  }
+
+  .headerimg {
+    position: relative; 
+    width: 270px;
+    height: 170px;
+  }
+  
+  .imgMain {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .element-class {
+    /* border: 2px solid #000;  */
+    padding: 10px; 
+    text-align: center; 
+    font-size: 10px; 
+  }
+  
+  .central-section {
+    flex-grow: 1;
+  }
+
+
+  .nav-login-logo {
+    margin-right: 2em;
   }
 
   nav {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: space-around;
     height: 100px;
+    width: 980px; */
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
     width: 980px;
 
     & li {
@@ -80,29 +115,157 @@
     cursor: pointer;
   }
 
-  .nav-login-logo {
-    margin-right: 2em;
+  .left-section,
+  .right-section {
+    width: 25%;
+    margin-left: auto;
   }
-
-  @media screen and (width > 1000px) {
-    .container {
-      width: 1000px;
-      margin: auto;
-    }
+  
+  main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
   }
 
   main {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: space-around;
     height: 100px;
+    width: 980px; */
+    grid-column: 1 / -1;
+    grid-row: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 300px;
     width: 980px;
   }
 
   footer {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: space-around;
     height: 50px;
+    width: 980px; */
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
     width: 980px;
   }
+  
+
+
+  /* .super-virs-headers {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  } */
+
+  /* main,
+  footer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  } */
+
+
+  /* section {
+    background-color: #f0f0f0; 
+    padding: 20px;
+    margin: 10px 0; 
+    border: 1px solid #ccc; 
+  } */
+
+
+
+  /* MEKLĒŠANAS POGA */
+
+
+  /* Meklēšanas formas stili */
+.search-form {
+  margin: 0 auto;
+  width: 300px;
+}
+
+/* Meklēšanas ievades lauka stili */
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid lightpink;
+  border-radius: 5px;
+  cursor: text;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: rgb(58, 168, 86); /* Apmales krāsa, kad lauks ir fokusā */
+}
+
+.search-container {
+  text-align: center; /* Lai centretu saturu horizontāli */
+}
+
+::placeholder {
+  color: rgb(58, 168, 86); /* Teksta ievades lauka ievades teksta krāsa */
+}
+
+.search-bar button img {
+  width: 25px;
+}
+
+#search-button {
+  background-color: rgb(58, 168, 86);
+  color: antiquewhite;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#search-button:hover {
+  background-color: rgb(48, 148, 76);
+}
+
+
+.search-bar input, .search-bar input:focus{
+  /* background-color: transparent; */
+  background: rgba(115, 7, 7, 0.2);
+  width: 100px;
+  justify-content: space-between;
+  border-radius: 60px;
+  align-items: center;
+  border: none;
+  outline: none;
+  padding: .5em 1em;
+  font-size: 1.25em;
+  color:rgb(34, 159, 101);
+  backdrop-filter: blur(4px) saturate(180%);
+} 
+
+
+/* NAVIGĀCIJA */
+
+
+ul.navigacija {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.dropdown {
+  position: relative; /* Parent element ar relative pozīciju */
+}
+
+.katalogs ul {
+  position: absolute; /* Iegremdētas apakšsadaļas ar absolute pozīciju */
+  top: 100%; /* Novietojiet apakšsadaļas tieši zem "Katalogs" pogas */
+  left: 0; /* Novietojiet apakšsadaļas pa kreisi no "Katalogs" pogas */
+  display: none; /* Sākumā paslēpjiet apakšsadaļas */
+}
+
+.katalogs:hover ul {
+  display: block; /* Kad "Katalogs" tiek nospiests, parādiet apakšsadaļas */
+}
