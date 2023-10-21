@@ -55,6 +55,13 @@
     text-align: center; 
     font-size: 10px; 
   }
+
+  .left-sectionnav {
+    width: 170px;
+    height: 100%;
+    /* width: 25%;
+    margin-left: auto; */
+  }
   
   .central-section {
     flex-grow: 1;
@@ -142,6 +149,8 @@
 
 .search-container {
   text-align: center; /* Lai centretu saturu horizontāli */
+  width: 280px;
+  height: 100%;
 }
 
 ::placeholder {
