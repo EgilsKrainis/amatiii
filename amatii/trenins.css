@@ -10,10 +10,8 @@ body {
 
 html,
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Lai novērstu rullīšanos, ja kāda sadaļa ir lielāka par ekrānu */
 }
 
 .inline {
