@@ -25,13 +25,6 @@ body {
   min-height: 100vh;
 }
 
-@media screen and (width > 1000px) {
-  .container {
-    width: 1000px;
-    margin: auto;
-  }
-}
-
 header {
   display: flex;
   align-items: center;
@@ -239,4 +232,17 @@ ul.navigacija {
 
 .katalogs:hover ul {
   display: block; /* Kad "Katalogs" tiek nospiests, parādiet apakšsadaļas */
+}
+
+@media screen and (width > 1000px) {
+  .container {
+    width: 1000px;
+    margin: auto;
+  }
+}
+
+@media screen and (width > 1600px) {
+  .container {
+    width: 1400px;
+  }
 }
