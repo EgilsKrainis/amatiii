@@ -104,9 +104,9 @@ main {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   display: flex;
-  align-items: center;
+  align-items: fle;
   justify-content: space-around;
-  height: 300px;
+  min-height: 300px;
 }
 
 footer {
