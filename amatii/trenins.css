@@ -104,7 +104,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   display: flex;
-  align-items: fle;
+  align-items: flex-start;
   justify-content: space-around;
   min-height: 300px;
 }
