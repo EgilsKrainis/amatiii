@@ -32,6 +32,10 @@ header {
   height: 100px;
 }
 
+.center-text {
+  text-align: center;
+}
+
 .headerimg {
   width: 270px;
   height: 100%;
@@ -110,7 +114,6 @@ footer {
     grid-column-end: 3;
   } */
 
-
 /* MEKLĒŠANAS POGA */
 
 .search-bar {
@@ -186,10 +189,10 @@ ul.navigacija {
 }
 
 .katalogs ul {
-  position: absolute; 
-  top: 100%; 
-  left: 0; 
-  display: none; 
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
 }
 
 .katalogs:hover ul {
