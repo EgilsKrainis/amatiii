@@ -21,20 +21,19 @@
         </div>
         <div class="left-sectionnav">Section 1 un kaut kas</div>
         <div class="search-container">
-            <form id="search-form">
-                <div class="search-bar">
-                    <input
-                        type="text"
-                        id="search-input"
-                        placeholder="meklēt..."
-                    />
-                    <button type="submit" id="search-button">
-                        Meklēt
-                    </button>
-                </div>
+            <form class="searchBox">
+              <div class="search-bar">
+                <input type="text" placeholder="Meklēt...">
+                <button type="submit">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg>
+                </button>
+              </div>
             </form>
-        </div>
-        <div id="search-results"></div>
+          </div>
+          <div id="search-results"></div>
+          
         <div class="nav-login-logo">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -101,33 +100,33 @@
     <main>
         <h1>Pasūtījuma Lapa</h1>
         <h2>Paldies, ka izmantojat mūsu mājaslapu!</h2>
-        <form action="submit.php" method="post"> <!-- Nomainiet "submit.php" ar reālu datu apstrādes skriptu -->
+        <form action="submit.php" method="post"> <!-- Nomainit "submit.php" ar reālu datu apstrādes skriptu -->
             <label for="gmail" class="custom-label">Pievienoties ar Gmail kontu:</label>
             <input type="text" id="gmail" name="gmail" required>
     
             <label>Jūsu atbilde:</label>
-            <label for="question1">Pirmais jautājums - Vārds, Uzvārds:</label>
+            <label for="question1">Vārds, Uzvārds:</label>
             <textarea id="question1" name="question1" rows="4" required></textarea>
     
-            <label for="question2">Otrais jautājums - Pasūtāmā produkta kods vai nosaukums:</label>
+            <label for="question2">Pasūtāmā produkta kods vai nosaukums:</label>
             <textarea id="question2" name="question2" rows="4" required></textarea>
     
-            <label for="question3">Trešais jautājums - Telefona numurs:</label>
+            <label for="question3">Telefona numurs:</label>
             <input type="text" id="question3" name="question3" required>
     
-            <label for="question4">Ceturtais jautājums - Sūtījuma saņemšanas adrese:</label>
+            <label for="question4">Sūtījuma saņemšanas adrese:</label>
             <textarea id="question4" name="question4" rows="4" required></textarea>
     
-            <label for="question5">Piektais jautājums - Vēlamais saziņas veids:</label>
+            <label for="question5">Vēlamais saziņas veids:</label>
             <input type="text" id="question5" name="question5" required>
     
-            <label for="question6">Sestais jautājums - Vēlamais pasūtījuma izgatavošanas termiņš:</label>
+            <label for="question6">Vēlamais pasūtījuma izgatavošanas termiņš:</label>
             <input type="text" id="question6" name="question6" required>
     
-            <label for="question7">Septītais jautājums - Pasūtījuma saņemšanas veids:</label>
+            <label for="question7">Pasūtījuma saņemšanas veids:</label>
             <input type="text" id="question7" name="question7" required>
     
-            <label for="question8">Astotais jautājums - Samaksas veids:</label>
+            <label for="question8">Samaksas veids:</label>
             <input type="text" id="question8" name="question8" required>
     
             <label>Apraksts un piekrīšana/nepiekrīšana:</label>
