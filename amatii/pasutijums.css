@@ -1,3 +1,6 @@
+.vertical-flex {
+    flex-direction: column;
+}
 .custom-label {
     max-width: 600px;
     margin-top: 10px;
