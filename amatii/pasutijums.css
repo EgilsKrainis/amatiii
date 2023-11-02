@@ -1,5 +1,8 @@
 .vertical-flex {
     flex-direction: column;
+    display: flex;
+    justify-content: center; /* Horizontāli iecentrē tekstu */
+    align-items: center; /* Vertikāli iecentrē tekstu */
 }
 .custom-label {
     max-width: 600px;

@@ -24,8 +24,14 @@
         "url": "http://kaut.kads.links"
     },
     {
-        "name": "Par mums",
+        "name": "Izstradajumi",
         "title": "Sadaļa Par mums",
+        "desc": "Sadaļa",
+        "url": ""
+    },
+    {
+        "name": "Grozs",
+        "title": "Sadaļa Katalogs",
         "desc": "Sadaļa",
         "url": "http://kaut.kads.links"
     }

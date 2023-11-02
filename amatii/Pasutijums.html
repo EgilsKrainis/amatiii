@@ -100,10 +100,8 @@
         <h1>Pasūtījuma Lapa</h1>
         <h2>Paldies, ka izmantojat mūsu mājaslapu!</h2>
         <form action="submit.php" method="post"> <!-- Nomainit "submit.php" ar reālu datu apstrādes skriptu -->
-            <label for="gmail" class="custom-label">Pievienoties ar Gmail kontu:</label>
-            <input type="text" id="gmail" name="gmail" required>
     
-            <label>Jūsu atbilde:</label>
+            <label>Jūsu atbilde:</label> 
             <label for="question1">Vārds, Uzvārds:</label>
             <textarea id="question1" name="question1" rows="4" required></textarea>
     
@@ -128,18 +126,15 @@
             <label for="question8">Samaksas veids:</label>
             <input type="text" id="question8" name="question8" required>
     
-            <label>Apraksts un piekrīšana/nepiekrīšana:</label>
-            <label for="description">Īss apraksts par noteikumiem:</label>
-            <textarea id="description" name="description" rows="4" required></textarea>
-    
             <label>Vai piekrītat noteikumiem?</label>
-            <input type="radio" id="agree" name="agreement" value="piekrītu" required>
             <label for="agree">Piekrītu</label>
-            <input type="radio" id="disagree" name="agreement" value="nepiekrītu" required>
+            <input type="radio" id="agree" name="agreement" value="piekrītu" required>
             <label for="disagree">Nepiekrītu</label>
+            <input type="radio" id="disagree" name="agreement" value="nepiekrītu" required>
     
             <button type="submit">Nosūtīt</button>
         </form>
+        <section class="right-section">Section 3</section>
     </main>
     <footer>
         <div id="social-icons">
