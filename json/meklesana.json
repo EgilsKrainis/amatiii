@@ -1,15 +1,15 @@
 [
     {
-        "name": "Par mums",
-        "title": "Sadaļa Par mums",
+        "name": "Bļoda",
+        "title": "Sadaļa Keramika",
         "desc": "Sadaļa",
-        "url": "http://kaut.kads.links"
+        "url": "Servize.html"
     },
     {
-        "name": "Par mums",
-        "title": "Sadaļa Par mums",
+        "name": "Vāze",
+        "title": "Sadaļa Keramika",
         "desc": "Sadaļa",
-        "url": "http://kaut.kads.links"
+        "url": "http://localhost/amatii/Keramika.html"
     },
     {
         "name": "Par mums",
@@ -30,9 +30,9 @@
         "url": ""
     },
     {
-        "name": "Grozs",
+        "name": "Bļoda",
         "title": "Sadaļa Katalogs",
         "desc": "Sadaļa",
-        "url": "http://kaut.kads.links"
+        "url": "http://localhost/amatii/Keramika.html"
     }
 ]

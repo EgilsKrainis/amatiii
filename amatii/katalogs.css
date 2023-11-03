@@ -21,6 +21,48 @@
   }
 }
 
+.cardtwo {
+  height: clamp(150px, 170px, 100px);
+  border: 1px solid green;
+  border-radius: 0.3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 10px;
+
+  & .pictwo {
+     height: 100px; 
+     width: 140px;
+
+  & .small-image {
+    max-width: 200px;
+    max-height: 150px;
+    height: 100px;
+    width: 165px;
+
+    & imgtwo {
+      width: 80%;
+      height: 100%;
+    }
+  }
+}
+}
+
+.cardtwoh3 {
+  text-align: center;
+}
+
+.sadaļa {
+  width: 50%;
+}
+
+.title {
+  text-align: center;
+}
+
+.content {
+  text-align: center;
+}
+
 .two-columns {
   display: flex;
   justify-content: space-between;
@@ -35,10 +77,10 @@
 
 .right-column {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.small-image {
-  max-width: 200px;
-  max-height: 200px;
-}
 

@@ -24,21 +24,25 @@
                     />
                 </div>
                 <div class="left-sectionnav">Section 1 un kaut kas</div>
-                <div class="search-container">
-                    <form id="search-form">
-                        <div class="search-bar">
-                            <input
-                                type="text"
-                                id="search-input"
-                                placeholder="meklēt..."
-                            />
-                            <button type="submit" id="search-button">
-                                Meklēt
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <div id="search-results"></div>
+                <section id="search-section">
+                    <div class="search-container">
+                        <form id="search-form">
+                            <div class="search-bar">
+                                <input
+                                    type="text"
+                                    id="search-input"
+                                    placeholder="meklēt..."
+                                />
+                                <button type="submit" id="search-button">
+                                    
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="search-results">
+                        <div id="no-results" style="display: none;">Nekas netika atrasts.</div>
+                    </div>
+                </section>
                 <div class="nav-login-logo">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +132,7 @@
                 <section class="left-section">kreisa mala</section>
                 <section class="central-section">
                     <div id="precu_katalogs">
-                        <a href="#">
+                        <a href="Servize.html">
                             <div class="card">
                                 <div class="pic">
                                     <img
@@ -330,7 +334,7 @@
                 .then((res) => res.json())
                 .then(console.log)
                 .catch(console.log);
-        </script>
-        <script src="/js/meklesana.js"></script>
+        </script> 
+        <script src="/json/meklesana.json"></script>
     </body>
 </html>

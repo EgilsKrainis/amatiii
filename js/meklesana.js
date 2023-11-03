@@ -1,99 +1,47 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var searchForm = document.getElementById("search-form");
-    var searchInput = document.getElementById("search-input");
-    var searchResults = document.getElementById("search-results");
-  
-    searchForm.addEventListener("submit", function(e) {
-      e.preventDefault();
-      var searchTerm = searchInput.value;
-      performSearch(searchTerm);
-    });
-  
-    function performSearch(term) {
-      // Šeit varētu būt JSON datu avots no servera vai citur
-      var jsonData = [
-        {
-          "name": "Par mums",
-          "title": "Sadaļa Par mums",
-          "desc": "Sadaļa",
-          "url": "http://kaut.kads.links"
-        },
-        // Papildus sadaļu dati...
-      ];
-  
-      var results = jsonData.filter(function(item) {
-        // Meklēšana pēc nosaukuma, nosaukuma, vai apraksta
-        return (
-          item.name.toLowerCase().includes(term.toLowerCase()) ||
-          item.title.toLowerCase().includes(term.toLowerCase()) ||
-          item.desc.toLowerCase().includes(term.toLowerCase())
-        );
-      });
-  
-      displayResults(results);
-    }
-  
-    function displayResults(results) {
-      var resultHTML = "";
-  
-      if (results.length === 0) {
-        resultHTML = "Nekas netika atrasts.";
-      } else {
-        results.forEach(function(result) {
-          resultHTML += "<h3><a href='" + result.url + "'>" + result.title + "</a></h3>";
-          resultHTML += "<p>" + result.desc + "</p>";
-        });
-      }
-  
-      searchResults.innerHTML = resultHTML;
-    }
+document.addEventListener("DOMContentLoaded", function () {
+  var searchForm = document.getElementById("search-form");
+  var searchInput = document.getElementById("search-input");
+  var searchResults = document.getElementById("search-results");
+
+  searchForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var searchTerm = searchInput.value;
+    performSearch(searchTerm);
   });
 
+  function performSearch(term) {
+    // Izveido URL, no kura iegūt JSON datus
+    // var searchURL = "https://api.example.com/search?q=" + encodeURIComponent(term);
+    var searchURL = "/json/meklesana.json" + encodeURIComponent(term);
 
 
-  
-// document.addEventListener("DOMContentLoaded", function() {
-//     var searchForm = document.getElementById("search-form");
-//     var searchInput = document.getElementById("search-input");
-//     var searchResults = document.getElementById("search-results");
+    fetch(searchURL)
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then(function (jsonData) {
+        displayResults(jsonData);
+      })
+      .catch(function (error) {
+        console.error("There was a problem with the fetch operation:", error);
+      });
+  }
 
-    
-//     searchInput.addEventListener("input", function() {
-//         var searchTerm = searchInput.value;
+  function displayResults(results) {
+    var resultHTML = "";
 
-//         if (searchTerm.trim() !== "") {
-//             performSearch(searchTerm);
-//         } else {
-//             searchResults.innerHTML = "";
-//         }
-//     });
+    if (results.length === 0) {
+      resultHTML = "Nekas netika atrasts.";
+    } else {
+      results.forEach(function (result) {
+        resultHTML += "<h3><a href='" + result.url + "'>" + result.title + "</a></h3>";
+        resultHTML += "<p>" + result.desc + "</p>";
+      });
+    }
 
-//     function performSearch(term) {
-//         // Šeit jūs varat izveidot meklēšanas funkcionalitāti un atjaunināt rezultātus "searchResults".
-//         // Piemēram, varat izmantot AJAX pieprasījumu, lai iegūtu rezultātus no servera.
-//         var searchResult = "Jūsu meklēšanas rezultāti: " + term;
-//         searchResults.innerHTML = searchResult;
-//     }
-// });
-
-
-
-
-// document.getElementById("search-button").addEventListener("click", function() {
-//     var searchTerm = searchInput.value;
-//     if (searchTerm.trim() !== "") {
-//       performSearch(searchTerm);
-//     } else {
-//       searchResults.innerHTML = "Ievadiet meklēšanas terminu!";
-//     }
-//   });
-
-//   function performSearch(term) {
-//     // Šeit jūs varat izveidot meklēšanas funkcionalitāti un atjaunināt rezultātus "searchResults".
-//     // Piemēram, varat izmantot AJAX pieprasījumu, lai iegūtu rezultātus no servera.
-//     var searchResult = "Jūsu meklēšanas rezultāti: " + term;
-//     searchResults.innerHTML = searchResult;
-//   }
-
-
-
+    searchResults.innerHTML = resultHTML;
+  }
+});
