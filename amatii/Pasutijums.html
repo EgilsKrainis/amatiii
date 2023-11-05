@@ -19,7 +19,7 @@
                 class="imgMain"
             />
         </div>
-        <div class="left-sectionnav">Section 1 un kaut kas</div>
+        <div class="left-sectionnav"></div>
         <div class="search-container">
             <form class="searchBox">
               <div class="search-bar">
@@ -193,11 +193,10 @@
         </div>
     </footer>
     <script>
-      fetch("meklesana.json")
-      .then((res) => res.json())
-      .then(console.log)
-      .catch(console.log);
+        fetch("/json/meklesana.json")
+        .then((res) => res.json())
+        .then(console.log)
+        .catch(console.log);
     </script>
-    <script src="/json/meklesana.json"></script>
   </body>
   </html>

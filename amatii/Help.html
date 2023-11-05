@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galvenā lapa</title>
     <link rel="stylesheet" href="trenins.css">
+    <link rel="stylesheet" href="katalogs.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
@@ -19,7 +20,7 @@
               class="imgMain"
           />
       </div>
-      <div class="left-sectionnav">Section 1 un kaut kas</div>
+      <div class="left-sectionnav"></div>
       <div class="search-container">
           <form class="searchBox">
             <div class="search-bar">
@@ -97,29 +98,44 @@
         </ul>
       </nav>
       <main>
-        <section class="left-section">kreisa mala</section>
+        <section class="left-section"></section>
         <section class="central-section">
           <div class="zinas">
             <article>
-              <h2>Kaut kāda ziņa</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus, asperiores corporis rerum blanditiis aperiam unde
-                explicabo inventore delectus neque laboriosam culpa architecto
-                non distinctio fugiat qui dignissimos itaque iure officia eum
-                cum et modi velit voluptates? Illum odit, voluptatum nulla,
-                officia distinctio provident maiores sint pariatur dolorem
-                molestiae corrupti aperiam.
-              </p>
+              <div class="nosauk-div">
+                <h2>Help</h2>
+              </div>
+              <div class="help-section">
+                <h2>Kā es varu apmaksāt savu pasūtījumu?</h2>
+                <p>Jūs varat apmaksāt pirkumus:</p>
+                <ul>
+                  <li>izmantojot SEB, Swedbank, Citadele vai Luminor interneta banku;</li>
+                  <li>norēķinoties ar VISA/MasterCard kredītkartēm un debetkartēm mājas lapā;</li>
+                  <li>norēķinoties ar VISA/MasterCard kredītkartēm un debetkartēm preču piegādes brīdī;</li>
+                  <li>Juridiskām personām ir iespēja saņemt priekšapmaksas rēķinu. Rēķins tiks nosūtīts uz 
+                    Jūsu norādīto e-pasta adresi un tas ir jāapmaksā līdz norādītajam datumam un laikam. 
+                    Apmaksa ir jāveic spiežot uz unikālo linku, kas ir norādīts e-pastā.</li>
+                </ul>
+            
+                <h2>Vai ir iespēja saņemt priekšapmaksas rēķinu un kā notiek to apmaksa?</h2>
+                <p>Juridiskām personām ir iespēja saņemt priekšapmaksas rēķinu. 
+                  Rēķins tiks nosūtīts uz Jūsu norādīto e-pasta adresi un tas ir jāapmaksā līdz norādītajam datumam. 
+                  Apmaksa ir jāveic spiežot uz unikālo linku, kas ir norādīts e-pastā. 
+                  Pasūtījuma apmaksai ir jānotiek caur interneta veikala Amatnieks.lv sistēmu. 
+                  Citu apmaksas iespēju interneta veikalā Amatnieks.lv nav.</p>
+            
+                <h2>Kāda ir minimālā pasūtījuma summa?</h2>
+                <p>Interneta veikala Amatnieks minimālā iepirkuma groza summa ir 15.00 €.</p>
+              </div>
             </article>
           </div>
           <div class="citas-zinas">
             <article class="cita-zina">
-              <h2>Cita ziņa</h2>
+              <h2></h2>
             </article>
           </div>
         </section>
-        <section class="right-section">Section 3</section>
+        <section class="right-section"></section>
       </main>
       <footer>
         <div id="social-icons">
@@ -179,11 +195,10 @@
       </footer>
     <!-- <script src="js/main.js"></script> -->
     <script>
-      fetch("meklesana.json")
+      fetch("/json/meklesana.json")
       .then((res) => res.json())
       .then(console.log)
       .catch(console.log);
     </script>
-    <script src="/js/meklesana.js"></script>
   </body>
   </html>

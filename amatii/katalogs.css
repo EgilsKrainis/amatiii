@@ -47,6 +47,26 @@
 }
 }
 
+.nosauk-div {
+  text-align: center;
+  margin-top: 20px; 
+  margin-bottom: 20px;
+}
+
+.sakums {
+  text-align: center;
+  margin-top: 20px; 
+  margin-bottom: 20px;
+  width: 750px;
+  height: 30px;
+}
+
+.pakalpojumuvirs {
+  text-align: center;
+  margin-top: 20px; 
+  margin-bottom: 20px;
+}
+
 .cardtwoh3 {
   text-align: center;
 }
@@ -83,4 +103,6 @@
   align-items: center;
 }
 
-
+.first-paragraph {
+  margin-top: 20px; 
+}

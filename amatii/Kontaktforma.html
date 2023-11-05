@@ -21,7 +21,7 @@
                         class="imgMain"
                     />
                 </div>
-                <div class="left-sectionnav">Section 1 un kaut kas</div>
+                <div class="left-sectionnav"></div>
                 <div class="search-container">
                     <form class="searchBox">
                       <div class="search-bar">
@@ -121,7 +121,7 @@
                 </ul>
             </nav>
             <main>
-                <section class="left-section">kreisa mala</section>
+                <section class="left-section"></section>
                 <section class="central-section">
                     <div class="contact-form-container">
                         <h2>Uzrakstiet mums!</h2>
@@ -143,7 +143,7 @@
                         </form>
                     </div>
                 </section>
-                <section class="right-section">Section 3</section>
+                <section class="right-section"></section>
             </main>
             <footer>
                 <div id="social-icons">
@@ -202,6 +202,11 @@
                 </div>
             </footer>
         </div>
-        <script src="/js/meklesana.js"></script>
+        <script>
+            fetch("/json/meklesana.json")
+            .then((res) => res.json())
+            .then(console.log)
+            .catch(console.log);
+        </script>
     </body>
 </html>

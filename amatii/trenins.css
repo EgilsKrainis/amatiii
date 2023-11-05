@@ -232,3 +232,26 @@ ul.navigacija {
   margin-inline-end: 0px;
   font-weight: bold;
 } */
+
+/* HELP */
+
+.help-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 20px;
+}

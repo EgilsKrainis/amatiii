@@ -19,7 +19,7 @@
               class="imgMain"
           />
       </div>
-      <div class="left-sectionnav">Section 1 un kaut kas</div>
+      <div class="left-sectionnav"></div>
       <div class="search-container">
           <form class="searchBox">
             <div class="search-bar">
@@ -97,14 +97,14 @@
         </ul>
       </nav>
       <main>
-        <section class="left-section">kreisa mala</section>
+        <section class="left-section"></section>
             <section class="central-section">
                 <!-- <div id="precu_katalogs" class="two-columns"> -->
                 <div class="two-columns">
                     <!-- <div class="contacts-container"> -->
                         <div class="left-column">
                             <div class="nosauk-div">
-                                    <h1>Par mums</h1>
+                                <h1>Par mums</h1>
                             </div>
                                 <p>Amatnieku apvienība veidota 2010. gadā. Apvienība ietilpst amatniecība nozares- keramika, aušana,
                                     ādas izstrādājumi, grozu pīšana. Meistari atrodas Rēzeknes nov. Meistariem ir ilga gadu pieredze.</p>
@@ -166,7 +166,7 @@
                     <!-- </div>     -->
                 </div>
             </section>
-        <section class="right-section">Section 3</section>
+        <section class="right-section"></section>
         <!-- <section id="par-mums"> -->
       </main>
     <footer>
@@ -227,11 +227,10 @@
     </footer>
     <!-- <script src="js/main.js"></script> -->
     <script>
-      fetch("meklesana.json")
-      .then((res) => res.json())
-      .then(console.log)
-      .catch(console.log);
+        fetch("/json/meklesana.json")
+        .then((res) => res.json())
+        .then(console.log)
+        .catch(console.log);
     </script>
-    <script src="/js/meklesana.js"></script>
   </body>
 </html>
