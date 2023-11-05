@@ -19,9 +19,9 @@ if(isset($_POST["savedata"])) {
     $password_hash = password_hash(htmlspecialchars($_POST["password"]),PASSWORD_DEFAULT);
 
     $serveris = 'localhost'; // vai jūsu datu bāzes servera IP adrese
-    $db_vards = 'login_db'; // jūsu datu bāzes nosaukums
+    $db_vards = 'egils'; // jūsu datu bāzes nosaukums
     $lietotajvards = 'egils';
-    $parole = 'DianA1993!';
+    $parole = 'amatnieks23';
 
     try {
         $savienojums = new PDO("mysql:host=$serveris;port=3306;dbname=$db_vards", $lietotajvards, $parole);
