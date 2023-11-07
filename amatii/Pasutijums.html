@@ -99,32 +99,32 @@
     <main class="vertical-flex">
         <h1>Pasūtījuma Lapa</h1>
         <h2>Paldies, ka izmantojat mūsu mājaslapu!</h2>
-        <form action="submit.php" method="post"> <!-- Nomainit "submit.php" ar reālu datu apstrādes skriptu -->
+        <form action="/php/pasutijums.php" method="post"> <!-- Nomainit "submit.php" ar reālu datu apstrādes skriptu -->
     
             <label>Jūsu atbilde:</label> 
-            <label for="question1">Vārds, Uzvārds:</label>
-            <textarea id="question1" name="question1" rows="4" required></textarea>
+            <label for="id">Vārds, Uzvārds:</label>
+            <textarea id="id" name="id" rows="4" required></textarea>
     
-            <label for="question2">Pasūtāmā produkta kods vai nosaukums:</label>
-            <textarea id="question2" name="question2" rows="4" required></textarea>
+            <label for="pasutijuma_id">Pasūtāmā produkta kods vai nosaukums:</label>
+            <textarea id="pasutijuma_id" name="pasutijuma_id" rows="4" required></textarea>
     
-            <label for="question3">Telefona numurs:</label>
-            <input type="text" id="question3" name="question3" required>
+            <label for="lietotaja_id">Telefona numurs:</label>
+            <input type="text" id="lietotaja_id" name="lietotaja_id" required>
     
-            <label for="question4">Sūtījuma saņemšanas adrese:</label>
-            <textarea id="question4" name="question4" rows="4" required></textarea>
+            <label for="produkta_id">Sūtījuma saņemšanas adrese:</label>
+            <textarea id="produkta_id" name="produkta_id" rows="4" required></textarea>
     
-            <label for="question5">Vēlamais saziņas veids:</label>
-            <input type="text" id="question5" name="question5" required>
+            <label for="datums">Vēlamais saziņas veids:</label>
+            <input type="text" id="datums" name="datums" required>
     
-            <label for="question6">Vēlamais pasūtījuma izgatavošanas termiņš:</label>
-            <input type="text" id="question6" name="question6" required>
+            <label for="statuss">Vēlamais pasūtījuma izgatavošanas termiņš:</label>
+            <input type="text" id="statuss" name="statuss" required>
     
-            <label for="question7">Pasūtījuma saņemšanas veids:</label>
-            <input type="text" id="question7" name="question7" required>
+            <label for="piegades_adrese">Pasūtījuma saņemšanas veids:</label>
+            <input type="text" id="piegades_adrese" name="piegades_adrese" required>
     
-            <label for="question8">Samaksas veids:</label>
-            <input type="text" id="question8" name="question8" required>
+            <label for="cena">Samaksas veids:</label>
+            <input type="text" id="cena" name="cena" required>
     
             <label>Vai piekrītat noteikumiem?</label>
             <label for="agree">Piekrītu</label>

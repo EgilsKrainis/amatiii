@@ -2,14 +2,14 @@
 // Pārbaudīt, vai formas dati ir iesniegti
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Iegūt formas ievades datus
-    $question1 = $_POST["question1"];
-    $question2 = $_POST["question2"];
-    $question3 = $_POST["question3"];
-    $question4 = $_POST["question4"];
-    $question5 = $_POST["question5"];
-    $question6 = $_POST["question6"];
-    $question7 = $_POST["question7"];
-    $question8 = $_POST["question8"];
+    $id = $_POST["id"];
+    $pasutijuma_id = $_POST["pasutijuma_id"];
+    $lietotaja_id = $_POST["lietotaja_id"];
+    $produkta_id = $_POST["produkta_id"];
+    $datums = $_POST["datums"];
+    $statuss = $_POST["statuss"];
+    $piegades_adrese = $_POST["piegades_adrese"];
+    $cena = $_POST["cena"];
     $agreement = $_POST["agreement"];
 
     // Izveidot savienojumu ar datu bāzi
