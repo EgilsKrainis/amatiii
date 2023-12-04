@@ -1,0 +1,13 @@
+CREATE USER 'egils'@'localhost' IDENTIFIED BY 'amatnieks23';
+GRANT ALL PRIVILEGES ON amatii.* TO 'egilsk'@'localhost';
+FLUSH PRIVILEGES;
+
+SHOW TRIGGERS FROM `amatii`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='amatii';
+SELECT * FROM `information_schema`.`COLUMNS` WHERE TABLE_SCHEMA='amatii' AND TABLE_NAME='pasutijumi' ORDER BY ORDINAL_POSITION;
+SHOW INDEXES FROM `pasutijumi` FROM `amatii`;
+SELECT * FROM information_schema.REFERENTIAL_CONSTRAINTS WHERE   CONSTRAINT_SCHEMA='amatii'   AND TABLE_NAME='pasutijumi'   AND REFERENCED_TABLE_NAME IS NOT NULL;
+SELECT * FROM information_schema.KEY_COLUMN_USAGE WHERE   TABLE_SCHEMA='amatii'   AND TABLE_NAME='pasutijumi'   AND REFERENCED_TABLE_NAME IS NOT NULL;
+SHOW CREATE TABLE `amatii`.`pasutijumi`;
+SELECT CONSTRAINT_NAME, CHECK_CLAUSE FROM `information_schema`.`CHECK_CONSTRAINTS` WHERE CONSTRAINT_SCHEMA='amatii' AND TABLE_NAME='pasutijumi';
+/* Entering session "egilsroot" */
